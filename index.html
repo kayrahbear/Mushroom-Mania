@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Musroom Mania!</title>
+        <link rel="stylesheet" type="text/css" href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+    </head>
+    <body ng-app="MushroomMania">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <img class="navbar-brand" alt="Brand" id="brandImg" src="images/mushroom.png">
+                <p class="navbar-text">It's Mushroom Mania Time!</p>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row searchFunction">
+            <form class="form-inline col-md-6 col-md-offset-3">
+                <div class="form-group">
+                    <label class="sr-only" for="textBox">Text Box</label>
+                    <input type="text" class="form-control" placeholder="Enter search text here" ng-model="searchText">
+                </div>
+                <label class="radio-inline">
+                    <input type="radio" name="inlineRadioOptions" value="false" ng-model="edible"> Poisonous
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="inlineRadioOptions" value="true" ng-model="edible"> Non-poisonous
+                </label>
+            </form>
+        </div>
+        <div class="row" ng-view>
+        </div>
+
+
+
+    </div>
+
+
+
+    <script type="text/javascript" src="lib/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="lib/bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="lib/bower_components/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="lib/bower_components/firebase/firebase.js"></script>
+
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/factories/getShrooms.js"></script>
+    <script type="text/javascript" src="js/controllers/mushroomController.js"></script>
+    </body>
+</html>
